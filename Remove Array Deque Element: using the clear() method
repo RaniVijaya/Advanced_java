@@ -1,0 +1,29 @@
+Write a program in collection to print the following output:
+
+
+
+To remove all the elements from the array deque, we use the clear() method
+Sample Output: 
+
+ArrayDeque: [Dog, Cat, Horse]
+
+New ArrayDeque: []
+
+
+//Code here
+//New ArrayDeque: []
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Deque d=new ArrayDeque();
+        d.offerFirst("Dog");
+        d.offer("Cat");
+        d.offerLast("Horse");
+        System.out.println("ArrayDeque: "+d);
+        d.clear();
+       System.out.println("New ArrayDeque: "+d);
+
+    }
+}
