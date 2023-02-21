@@ -1,0 +1,23 @@
+Write a java program using collection to display the following output:
+
+Methods: 
+
+To add an element to the top of the stack, we use the push() method.
+Sample Output: 
+
+Stack: [Dog, Horse, Cat]
+
+//Code here
+//Stack: [Dog, Horse, Cat]
+import java.util.*;
+public class collection
+{
+    public static void main(String[] args)
+    {
+        Stack s=new Stack();
+        s.push("Dog");
+        s.push("Horse");
+        s.push("Cat");
+        System.out.println("Stack: "+s);
+    }
+}
