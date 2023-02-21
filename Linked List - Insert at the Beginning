@@ -1,0 +1,85 @@
+Write a program to get number of values from user until user enter a negative value and store those values in list implementation. After storing all list values, user enters a new value but that new value needs to be inserted at the beginning of the list.
+
+Hint: First create a inner class to define the structure of node. Second create a method called "append()" to insert the values to the list and link the nodes. Third create a print method to print the values in list. Fourth create a beginning method to add new value to the front of the list.
+
+Input Format:
+Get input value as integer until user enters a negative value.
+
+Output Format:
+Print all list values.
+
+Sample Input:
+1
+2
+3
+4
+-1
+10
+
+Sample Output:
+10 1 2 3 4 
+
+
+import java.util.Scanner;
+
+class Node {
+    int data;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+        last.next = newNode;
+    }
+
+    public void insertAtStart(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        LinkedList list = new LinkedList();
+      //  System.out.println("Enter a series of positive numbers, end with a negative number: ");
+        int input = sc.nextInt();
+        while (input >= 0) {
+            list.insertAtEnd(input);
+            input = sc.nextInt();
+        }
+       // System.out.println("Enter a new number to insert at the beginning of the list: ");
+        int newNumber = sc.nextInt();
+        list.insertAtStart(newNumber);
+      //  System.out.println("The numbers you entered are: ");
+        list.printList();
+    }
+}
+
