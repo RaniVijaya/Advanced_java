@@ -1,0 +1,20 @@
+//Code here
+import java.util.*;
+public class collection
+{
+    public static void main(String[] args)
+    {
+        ArrayList<String> a=new <String>ArrayList();
+        a.add("Cow");
+        a.add("Cat");
+        a.add("Dog");
+        //ArrayList: [Cow, Cat, Dog]
+//Accessing individual elements:
+System.out.println("ArrayList:"+a);
+System.out.println("Accessing individual elements:");
+for(String animal:a){
+    System.out.print(animal+",");
+}
+
+    }
+}
