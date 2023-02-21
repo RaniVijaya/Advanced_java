@@ -1,0 +1,30 @@
+Write a java program using the collection to display the following output:
+
+Methods: 
+
+Sample Output: 
+Queue: [1, 2, 3]
+Accessed Element: 1
+Removed Element: 1
+Updated Queue: [2, 3]
+
+
+//Code here
+/*Queue: [1, 2, 3]
+Accessed Element: 1
+Removed Element: 1
+Updated Queue: [2, 3]*/
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Queue q=new PriorityQueue();
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        System.out.println("Queue: "+q);
+        System.out.println("Accessed Element: "+q.peek());
+        System.out.println("Removed Element: "+q.remove());
+        System.out.println("Updated Queue: "+q);
+    }
+}
