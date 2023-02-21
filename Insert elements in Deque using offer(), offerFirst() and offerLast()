@@ -1,0 +1,28 @@
+Write a java program using the collection to display the following output:
+
+Methods: 
+
+
+
+Insert elements using offer(), offerFirst() and offerLast()
+
+offer() - inserts the specified element at the end of the array deque
+offerFirst() - inserts the specified element at the beginning of the array deque
+offerLast() - inserts the specified element at the end of the array deque
+
+Sample Output: 
+ArrayDeque: [Cat, Dog, Horse]
+
+
+//Code here
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Deque d=new ArrayDeque();
+        d.offerFirst("Cat");
+        d.offer("Dog");
+        d.offerLast("Horse");
+        System.out.println("ArrayDeque: "+d);
+    }
+}
