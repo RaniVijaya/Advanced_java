@@ -1,0 +1,72 @@
+Write a Java Program to print employee details using hybrid inheritance
+
+Input and Output Format
+
+Refer sample input and output.
+
+Sample Input
+
+Enter No. of Instructor Details You Want :  1                                                                                                                                                                   
+
+Enter Id  :  1234                                                                                                                 
+
+Enter Name :  Ram                                                                                                                       
+
+Enter Subject Name :  Maths                                                                                                                                                                  
+
+Enter Teacher Name :  Surya                                                                             
+
+Enter Department Name :  EEE                                                                                                                    
+
+Sample Output                                                                                                                                        
+
+Id :  1234                                                                                                                                      
+
+Name :  Ram                                                                                                                                     
+
+Subject Name  :  Maths                                                                                                                          
+
+Teacher Name  :  Surya                                                                                                                          
+
+Department Name :  EEE
+
+import java.util.*;
+class Instruct
+{
+    public void display()
+    {
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter No. of Instructor Details You Want : ");
+    int a=sc.nextInt();
+    System.out.print("Enter Id  : ");
+    int b=sc.nextInt();
+    System.out.print("Enter Name : ");
+    String c=sc.next();
+    System.out.print("Enter Subject Name : ");
+    String d=sc.next();
+    System.out.print("Enter Teacher Name : ");
+    String e=sc.next();
+    System.out.print("Enter Department Name : ");
+    String f=sc.next();
+    System.out.println("Id: " +b);
+    System.out.println("Name : " +c);
+    System.out.println("Subject Name : " +d);
+    System.out.println("Teacher Name : " +e);
+    System.out.print("Department Name : " +f);
+}
+}
+class instructor extends Instruct
+{
+    public static void main(String[] args)
+    {
+        Instruct  inst=new Instruct ();
+        inst.display();
+    }
+}
+    
+    
+    
+    
+    
+    
+    
