@@ -1,0 +1,24 @@
+Write a program in collection to print the following output:
+
+
+
+
+Sample Output: 
+
+
+HashMap: {Java=8, JavaScript=1, Python=3}
+
+//Code here
+//HashMap: {Java=8, JavaScript=1, Python=3}
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        HashMap<String,Integer> m=new HashMap<String,Integer>();
+        m.put("Java",8);
+        m.put("JavaScript",1);
+        m.put("Python",3);
+        System.out.println(m);
+    }
+}
+
