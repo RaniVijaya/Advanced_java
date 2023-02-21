@@ -1,0 +1,16 @@
+Write a java program using ArrayList ti print the following output:
+
+ArrayList: [Java, Python, Swift]
+
+//code here
+import java.util.*;
+public class Array{
+    public static void main(String[] args)
+    {
+        ArrayList a=new ArrayList();
+        a.add("Java");
+        a.add("Python");
+        a.add("Swift");
+        System.out.println(a);
+    }
+}
