@@ -1,0 +1,30 @@
+Write a program in collection to print the following output:
+
+Access elements using peek(), peekFirst() and peekLast() method
+
+peek() - returns the first element of the array deque
+peekFirst() - returns the first element of the array deque (equivalent to peek())
+peekLast() - returns the last element of the array deque
+Sample Output: 
+
+
+ArrayDeque: [Dog, Cat, Horse]
+Head Element: Dog
+First Element: Dog
+Last Element: Horse
+
+//Code here
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Deque d=new ArrayDeque();
+        d.offerFirst("Dog");
+        d.offer("Cat");
+        d.offerLast("Horse");
+        System.out.println("ArrayDeque: "+d);
+        System.out.println("Head Element: "+d.peek());
+        System.out.println("First Element: "+d.peekFirst());
+        System.out.println("Last Element: "+d.peekLast());
+    }
+}
