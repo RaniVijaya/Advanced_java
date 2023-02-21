@@ -1,0 +1,17 @@
+Write a java program using ArrayList to display the following output:
+
+LinkedList: [Dog, Cat, Cow]
+
+//Code here
+import java.util.*;
+public class collection
+{
+    public static void main(String[] args)
+    {
+        LinkedList list=new LinkedList();
+        list.add("Cow");
+        list.add("Cat");
+        list.add("Dog");
+        System.out.println("LinkedList: "+list);
+    }
+}
