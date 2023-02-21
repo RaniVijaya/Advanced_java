@@ -1,0 +1,25 @@
+Write a java program using the collection to display the following output:
+
+Methods: 
+
+To remove an element from the top of the stack, we use the pop() method. 
+Sample Output: 
+
+Initial Stack: [Dog, Horse, Cat]
+Removed Element: Cat
+
+//Code here
+//Initial Stack: [Dog, Horse, Cat]
+//Removed Element: Cat
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Stack s=new Stack();
+        s.push("Dog");
+        s.push("Horse");
+        s.push("Cat");
+        System.out.println("Initial Stack: "+s);
+        System.out.println("Removed Element: "+s.pop());
+    }
+}
