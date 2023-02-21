@@ -1,0 +1,23 @@
+Write a java program using ArrayList to display the following output:
+
+ArrayList: [Dog, Cat, Horse]
+Updated ArrayList: [Dog, Cat]
+Removed Element: Horse
+
+//Code here
+import java.util.*;
+public class collection{
+    public static void main(String[] args)
+    { 
+        ArrayList<String> a=new ArrayList<String>();
+        a.add("Cat");
+        a.add("Dog");
+        a.add("Horse");
+        System.out.println(a);
+        String b=a.remove(2);
+       System.out.println("Updated ArrayList: " + a);
+    System.out.println("Removed Element: "+b);
+  }
+}
+    
+
