@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+class Node {
+    int data;
+    Node next;
+    Node prev;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+        this.prev = null;
+    }
+}
+
+class DoublyLinkedList {
+    Node head;
+
+    public DoublyLinkedList() {
+        head = null;
+    }
+
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node last = head;
+            while (last.next != null) {
+                last = last.next;
+            }
+            last.next = newNode;
+            newNode.prev = last;
+        }
+    }
+
+    public void printReverse() {
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+
+        while (last != null) {
+            System.out.print(last.data + " ");
+            last = last.prev;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        DoublyLinkedList dll = new DoublyLinkedList();
+
+      //  System.out.println("Enter numbers, enter a negative number to stop:");
+        int n = sc.nextInt();
+        while (n >= 0) {
+            dll.insert(n);
+            n = sc.nextInt();
+        }
+
+        //System.out.println("Numbers in reverse order:");
+        dll.printReverse();
+    }
+}
