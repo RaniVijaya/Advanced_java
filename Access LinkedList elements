@@ -1,0 +1,20 @@
+Write a java program using ArrayList to display the following output:
+
+LinkedList: [Python, Java, JavaScript]
+Element at index 1: Java
+//Code here
+//LinkedList: [Python, Java, JavaScript]
+//Element at index 1: Java
+import java.util.*;
+public class collection
+{
+    public static void main(String[] args)
+    {
+        LinkedList<String> li=new LinkedList<String>();
+        li.add("Python");
+        li.add("Java");
+        li.add("JavaScript");
+        System.out.println("LinkedList: "+li);
+        System.out.println("Element at index 1: "+li.get(1));
+    }
+}
