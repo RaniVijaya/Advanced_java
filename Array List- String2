@@ -1,0 +1,20 @@
+Write a program using ArrayList to print the follwoing output:
+ArrayList: [Cat, Dog, Cow]
+Element at index 1: Dog
+
+
+//code here
+import java.util.*;
+public class Array2
+{
+    public static void main(String[] args)
+    {
+        ArrayList a=new ArrayList();
+        a.add("cat");
+        a.add("dog");
+        a.add("cow");
+        System.out.println(a);
+        System.out.println("Element at index 1: Dog");
+        
+    }
+}
