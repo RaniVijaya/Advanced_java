@@ -1,0 +1,22 @@
+ArrayDeque: [Dog, Cat, Horse]
+First Element: Dog
+Last Element: Horse
+
+
+//Code here
+/*ArrayDeque: [Dog, Cat, Horse]
+First Element: Dog
+Last Element: Horse*/
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Deque d=new ArrayDeque();
+        d.offerFirst("Cat");
+        d.offer("Dog");
+        d.offerLast("Horse");
+        System.out.println("ArrayDeque: "+d);
+        System.out.println("First Element: "+d.peekFirst());
+        System.out.println("Last Element: "+d.peekLast());
+    }
+}
