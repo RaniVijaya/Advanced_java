@@ -1,0 +1,77 @@
+Write a program to get number of values from user until user enter a negative value and store those values in circular linked list implementation.
+
+Hint: First create a inner class to define the structure of node. Second create a method called "append()" to insert the values to the list and link the nodes. Third create a print method to print the values in list.
+
+Input Format:
+Get input value as integer until user enters a negative value.
+
+Output Format:
+Print all list values.
+
+Sample Input:
+1
+2
+3
+4
+-1
+
+Sample Output:
+1 2 3 4 
+
+import java.util.Scanner;
+
+class Node {
+    int data;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class CircularLinkedList {
+    Node head;
+
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            return;
+        }
+
+        Node last = head;
+        while (last.next != head) {
+            last = last.next;
+        }
+        last.next = newNode;
+        newNode.next = head;
+    }
+
+    public void printList() {
+        Node current = head;
+        if (head != null) {
+            do {
+                System.out.print(current.data + " ");
+                current = current.next;
+            } while (current != head);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        CircularLinkedList list = new CircularLinkedList();
+       // System.out.println("Enter a series of positive numbers, end with a negative number: ");
+        int input = sc.nextInt();
+        while (input >= 0) {
+            list.insertAtEnd(input);
+            input = sc.nextInt();
+        }
+      //  System.out.println("The numbers you entered are: ");
+        list.printList();
+    }
+}
